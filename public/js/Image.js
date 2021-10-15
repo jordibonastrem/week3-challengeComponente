@@ -1,7 +1,14 @@
-import Component from "./Component";
+import Component from "./Component.js";
 
 class Image extends Component {
-  constructor(parentElement, className, htmlTag = "div") {
-    super(parentElement, className, htmlTag);
+  url;
+  constructor(parentElement, url) {
+    super(parentElement, "myimg", "img");
+
+    this.url = url;
+
+    this.element.src = url;
   }
 }
+
+export default Image;
