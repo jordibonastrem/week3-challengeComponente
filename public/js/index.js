@@ -1,11 +1,13 @@
 import Component from "./Component.js";
 
-parent = document.querySelector(".list");
+const parent = document.querySelector(".list");
+const userInput = document.querySelector("#input");
 
 document.querySelector(".mybutton").addEventListener("click", () => {
   crearCaja();
 });
 
 function crearCaja() {
-  return new Component(parent, "item", "li");
+  console.log(userInput.value);
+  return new Component(parent, "item", userInput.value);
 }
